@@ -37,13 +37,4 @@ NLinqs is a high-performance, lightweight, and enterprise-grade **Web Link Manag
 * **State Management Loop:** A centralized DOM event listener continuous-monitors the active stylesheet layout layer for dark-state toggle actions.
 * **Asset Optimization:** Upon state modification, the engine performs a binary asset swap, instantly switching high-resolution, transparency-optimized branding logos (`nlinqs.png` ↔ `rdark.png`) without causing rendering artifacts or structural shifting.
 
----
 
-## 📂 Project Structure Matrix
-
-text
-.
-├── LICENSE           # Official MIT Legal Framework
-├── index.html        # Semantically structured DOM tree & component skeleton
-├── l.css             # Fluid responsive layout sheets & variable design matrices
-├── l.js              # State manager, algorithmic parsers, & local storage bridge
