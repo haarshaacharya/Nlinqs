@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLinqs</title>
+    <link rel="stylesheet" href="l.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <div class="left">
+            <img src="nlinqs.png" class="logo-img" id="mainLogo" alt="NLinqs Logo">
+        </div>
+
+        <div class="right">
+            <div class="search-box">
+                <input type="url" id="siteUrl" placeholder="url">
+            </div>
+
+            <button class="add-btn" onclick="addLink()">Add</button>
+            
+            <label class="switch">
+                <input type="checkbox" id="themeToggle" onclick="toggleMode()">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+    </div>
+
+    <div id="linksContainer" class="links-grid"></div>
+
+</div>
+
+<script src="l.js"></script>
+</body>
+</html>

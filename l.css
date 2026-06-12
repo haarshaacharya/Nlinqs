@@ -1,0 +1,228 @@
+/* GLOBAL LAYOUT RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+/* WINDOW CONTROLLER LIGHT MODE */
+body {
+    background: #ffffff;
+    color: #0f172a;
+    min-height: 100vh;
+    padding: 20px 40px; /* Side padding badhai hai base container scaling ke liye */
+    display: flex;
+    justify-content: center;
+}
+
+/* DARK MODE CONTROLLER */
+body.dark {
+    background: #0f172a;
+    color: #ffffff;
+}
+
+/* CONTAINER LIMITER */
+.container {
+    width: 100%;
+    max-width: 1400px; /* Screen utilization area badhaya taaki left/right layout shift na ho */
+}
+
+/* HEADER MAIN CONTAINER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+/* LEFT CONTROLS VIEW (LOGO WRAPPER) */
+.left {
+    display: flex;
+    align-items: center;
+    margin-left: -15px; /* Logo ko thoda aur extreme left shift karne ke liye */
+}
+
+/* LOGO SIZE KO BADHA AUR SHARP KIYA */
+.logo-img {
+    height: 80px; /* Height 68px se badha kar 80px ki hai taaki clear aur big dikhe */
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* RIGHT CONTROLS VIEW */
+.right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* SEARCH BAR COHESION */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #ffffff !important;
+    border: 2px solid #1a1a1a;
+    border-radius: 30px;
+    padding: 12px 25px;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 400px; /* Search box thoda wider aur symmetric kiya hai */
+    background: transparent;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000 !important;
+}
+
+.search-box input::placeholder {
+    color: #757575;
+    opacity: 1;
+}
+
+/* LIME GREEN ADD BUTTON */
+.add-btn {
+    padding: 12px 32px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background: #62eb12; 
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.add-btn:hover {
+    background: #52c70e;
+}
+
+/* PILL STYLE TOGGLE SWITCH */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 34px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #475569;
+    transition: .3s ease;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .3s ease;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #62eb12;
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+/* ARROW MARK VAALI BALANCED GRID SPACE (FIXED) */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+    padding-left: 5px; /* Grid start alignment logo ke exact line-vertical edge se align hogi */
+}
+
+/* CARDS DESIGN */
+.card {
+    background: #ffffff;
+    border: 2px solid #0f172a;
+    border-radius: 16px;
+    padding: 24px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+}
+
+body.dark .card {
+    background: #1e293b;
+    border-color: #475569;
+}
+
+.logo-box {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px auto;
+    cursor: pointer;
+}
+
+.logo-box img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.site-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    word-break: break-all;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.open-btn, .delete-btn {
+    flex: 1;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.open-btn {
+    background: #62eb12;
+    color: white;
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+}
+
+.empty {
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 5px;
+}
